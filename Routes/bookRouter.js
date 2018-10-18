@@ -10,8 +10,8 @@ bookRouter
     });
   })
   .post((req, res) => {
-    console.log(req.body);
-    let book = new Book(req.body);
+    console.log(req);
+    let book = new Book(req.body.body);
     book.save();
     console.log("book", book);
     res.status(201).send(book);
